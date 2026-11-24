@@ -1,0 +1,37 @@
+PRATOFEITO – COMO ABRIR
+=======================
+
+1) Descompacte a pasta.
+2) Dê dois cliques em:
+     Windows ........ iniciar.bat
+     Mac ............ iniciar.command   (se o Mac bloquear: botão direito > Abrir)
+     Linux .......... iniciar.sh
+3) Pronto. O site abre sozinho no navegador (http://localhost:3000).
+
+Na primeira vez ele baixa o que precisa (precisa de internet, ~1 minuto).
+Nas próximas abre em segundos. Se não tiver o Node.js, o atalho tenta instalar sozinho
+(no Windows via winget) ou abre a página de download.
+
+Não precisa instalar PostgreSQL, criar banco, copiar .env nem abrir dois servidores:
+o banco já vem embutido e é criado automaticamente na pasta ecommerce-backend/data.
+
+CONTAS DE DEMONSTRAÇÃO (senha: demo12345)
+  Estabelecimento: fornecedor@demo.com
+  Comprador:       comprador@demo.com
+
+PARA ENCERRAR: Ctrl+C na janela preta, ou simplesmente feche-a.
+PARA ZERAR OS DADOS: feche o site e apague a pasta ecommerce-backend/data.
+
+AVANÇADO (opcional)
+  - Postgres próprio: defina DATABASE_URL (ou DB_HOST/DB_USER/DB_PASS/DB_NAME) em um arquivo .env.
+  - Em servidor real: NODE_ENV=production (desliga as contas de demonstração) e defina JWT_SECRET.
+  - Outra porta: PORT=8080.
+
+RECURSOS (v1.1)
+  Idiomas ........ Português, English e Español (seletor no topo; a escolha fica salva no navegador).
+  Instalar como app  No Chrome/Edge/Android: menu > "Instalar PratoFeito" (funciona offline com o que já carregou).
+  Meus dados ..... Painel/Impacto > "Baixar meus dados (JSON)".
+  Registro de acesso  http://localhost:3000/#/logs (só abre no computador que hospeda o site).
+                  Arquivo bruto: ecommerce-backend/data/access.log. IP anonimizado, sem senhas, apagado após 90 dias.
+  Testes ......... Na pasta ecommerce-backend: npm test
+  Docker ......... docker build -t pratofeito .  (veja o Dockerfile)
