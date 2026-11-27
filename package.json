@@ -1,0 +1,26 @@
+{
+  "name": "pratofeito",
+  "version": "2.0.0",
+  "description": "PratoFeito: comida boa que sobrou hoje em padarias, restaurantes e mercados, com desconto ou de graça.",
+  "private": true,
+  "type": "module",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "start:lan": "node server/index.js --lan",
+    "dev": "node --watch-path=server --watch-path=public server/index.js",
+    "test": "node --test --test-concurrency=1 tests/",
+    "reset": "node server/index.js --reset --no-listen",
+    "icons": "node scripts/generate-icons.js"
+  },
+  "keywords": [
+    "desperdicio-de-alimentos",
+    "marketplace",
+    "pwa",
+    "i18n"
+  ],
+  "license": "MIT"
+}

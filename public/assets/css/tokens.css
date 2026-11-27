@@ -1,0 +1,137 @@
+:root {
+  color-scheme: light;
+
+    --ink: #18213a;
+  --ink-2: #444f6b;
+  --ink-3: #636e8a;
+  --paper: #f3f5fa;
+  --surface: #ffffff;
+  --surface-2: #edf0f7;
+  --surface-3: #e2e7f2;
+  --line: #d9dfeb;
+  --line-strong: #c3cbdc;
+
+  --agata: #2348c9;
+  --agata-strong: #18359c;
+  --agata-soft: #e5ebff;
+  --agata-ink: #1d3aa6;
+  --on-agata: #ffffff;
+
+  --feira: #ffd43b;
+  --feira-deep: #f2b705;
+  --on-feira: #18213a;
+
+  --couve: #17773f;
+  --couve-soft: #e1f3e8;
+  --couve-ink: #13622f;
+  --on-couve: #ffffff;
+
+  --tomate: #c9372b;
+  --tomate-soft: #fde7e4;
+  --tomate-ink: #a92d22;
+  --on-tomate: #ffffff;
+
+  --ambar-soft: #fff4d6;
+  --ambar-ink: #7a5200;
+
+  --focus: #2348c9;
+  --overlay: rgb(16 22 40 / 0.48);
+
+    --shadow-float: 0 12px 32px -8px rgb(24 33 58 / 0.22), 0 2px 6px rgb(24 33 58 / 0.08);
+  --shadow-tag: 0 2px 0 rgb(24 33 58 / 0.18);
+
+    --font-display: "Bahnschrift", "DIN Alternate", "DIN Next", "Barlow", "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-text: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Roboto, Arial, sans-serif;
+
+    --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.3125rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+  --fs-4xl: 2.25rem;
+  --fs-5xl: 3rem;
+  --fs-6xl: 3.75rem;
+
+    --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.25rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-10: 2.5rem;
+  --s-12: 3rem;
+  --s-16: 4rem;
+  --s-20: 5rem;
+
+    --r-tag: 4px;
+  --r-control: 10px;
+  --r-card: 14px;
+  --r-panel: 22px;
+  --r-pill: 999px;
+
+  --container: 1200px;
+  --header-h: 64px;
+  --tabbar-h: 64px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur: 180ms;
+
+  --chart-1: #2348c9;
+  --chart-2: #0096a6;
+  --chart-3: #d18f00;
+  --chart-4: #8e44c9;
+  --chart-grid: #e3e8f2;
+  --chart-axis: #636e8a;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --ink: #e8ecf6;
+  --ink-2: #b7c0d6;
+  --ink-3: #8f9ab4;
+  --paper: #0d1322;
+  --surface: #141b2e;
+  --surface-2: #1b2339;
+  --surface-3: #232d47;
+  --line: #28324d;
+  --line-strong: #36415f;
+
+  --agata: #8aa6ff;
+  --agata-strong: #a9beff;
+  --agata-soft: #1d2a52;
+  --agata-ink: #a9beff;
+  --on-agata: #0b1020;
+
+  --feira: #ffd43b;
+  --feira-deep: #f2b705;
+  --on-feira: #18213a;
+
+  --couve: #1f8a4c;
+  --couve-soft: #12301f;
+  --couve-ink: #6fd69b;
+  --on-couve: #ffffff;
+
+  --tomate: #c9372b;
+  --tomate-soft: #3a1a1a;
+  --tomate-ink: #ff8f84;
+  --on-tomate: #ffffff;
+
+  --ambar-soft: #33280c;
+  --ambar-ink: #f5c95c;
+
+  --focus: #a9beff;
+  --overlay: rgb(3 6 14 / 0.66);
+
+  --shadow-float: 0 16px 40px -8px rgb(0 0 0 / 0.6), 0 2px 8px rgb(0 0 0 / 0.4);
+  --shadow-tag: 0 2px 0 rgb(0 0 0 / 0.45);
+
+  --chart-1: #6585f0;
+  --chart-2: #0fa3a8;
+  --chart-3: #bd8a00;
+  --chart-4: #b06ee0;
+  --chart-grid: #222b44;
+  --chart-axis: #8f9ab4;
+}

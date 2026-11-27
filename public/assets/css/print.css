@@ -1,0 +1,30 @@
+:root, :root[data-theme="dark"] {
+  color-scheme: light;
+  --ink: #000;
+  --ink-2: #222;
+  --ink-3: #444;
+  --paper: #fff;
+  --surface: #fff;
+  --surface-2: #f2f2f2;
+  --line: #ccc;
+  --line-strong: #999;
+  --chart-grid: #ddd;
+  --chart-axis: #333;
+}
+@page { margin: 14mm; }
+body { background: #fff; padding: 0 !important; font-size: 11pt; }
+.site-header, .site-footer, .tabbar, .bag-bar, .toasts, .skip-link, .route-progress,
+.report-filters .segmented, .custom-range, .report-actions, .btn, .segmented, .chart-tip, .live-note,
+.account-nav, .table-view summary, nav.breadcrumb, .back-link, .chart-crosshair { display: none !important; }
+.container { max-width: none; padding: 0; }
+.page { padding: 0; }
+.report-page .print-header { display: flex; align-items: center; gap: 12px; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 2px solid #000; }
+.print-header div { display: grid; }
+.print-only { display: block; margin-top: 12px; }
+.table-view[open] .table-wrap, .table-view .table-wrap { max-height: none; overflow: visible; }
+.panel, .stat, .table-wrap { border-color: #bbb; break-inside: avoid; box-shadow: none; }
+.report-grid { grid-template-columns: 1fr 1fr; }
+.stats { grid-template-columns: repeat(4, 1fr); }
+.stat dd { font-size: 16pt; }
+a { color: #000; text-decoration: none; }
+.impact-hero { background: #fff; color: #000; border: 2px solid #000; }
