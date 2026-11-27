@@ -3,28 +3,23 @@ chcp 65001 >nul
 title PratoFeito
 cd /d "%~dp0"
 
-where node >nul 2>nul
-if errorlevel 1 goto :sem_node
+set "NODE_EXE="
+where node >nul 2>nul && set "NODE_EXE=node"
+if not defined NODE_EXE if exist "%ProgramFiles%\nodejs\node.exe" set "NODE_EXE=%ProgramFiles%\nodejs\node.exe"
+if not defined NODE_EXE if exist "%APPDATA%\fnm\aliases\default\node.exe" set "NODE_EXE=%APPDATA%\fnm\aliases\default\node.exe"
+if not defined NODE_EXE if exist "%LOCALAPPDATA%\fnm\aliases\default\node.exe" set "NODE_EXE=%LOCALAPPDATA%\fnm\aliases\default\node.exe"
 
-node server\index.js --open
-echo.
-pause
-exit /b 0
-
-:sem_node
-echo.
-echo   O PratoFeito precisa do Node.js 22.13 ou mais novo.
-echo   Tentando instalar a versão LTS pelo winget...
-echo.
-winget install -e --id OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements
-if errorlevel 1 (
+if not defined NODE_EXE (
   echo.
-  echo   Não deu para instalar automaticamente. Abrindo a página de download...
-  start "" https://nodejs.org/pt-br/download
+  echo   Nao encontrei o Node.js neste computador.
+  echo   Instale a versao LTS em https://nodejs.org ^(ou rode "fnm install 26"^)
+  echo   e depois abra este arquivo de novo.
+  echo.
   pause
   exit /b 1
 )
+
+"%NODE_EXE%" server\index.js --open
 echo.
-echo   Node.js instalado. Feche esta janela e abra o iniciar.bat de novo.
+echo   O servidor parou. Veja a mensagem acima.
 pause
-exit /b 0
